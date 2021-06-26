@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do</title>
-    <link rel="stylesheet" href="td.css">
-    <script defer src="td.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/CSS/td.css">
+  <script defer src="/JS/td.js"></script>
+  <title>ToDos List - Organize Your Work</title>
 </head>
+
 <body>
-    <div class="header">
-        <h2 style="margin:5px">To Do List</h2>
-        <input type="text" id="myInput" placeholder="Title...">
-        <span onclick="newElement()" class="addBtn">Add</span>
-      </div>
-  
-      <ul id="myUL">
-        <li class="checked">Go through DataFlair's JavaScript tutorials</li>
-        <li>Practise the codes</li>
-        <li>Read a book on JavaScript</li>
-        <li class="checked">Organise my notes</li>
-        <li>Create JavaScript projects</li>
-        <li>Take quiz</li>
-        <li>Comprehend interview questions</li>
-      </ul>
-      <button type="button" id="clear-list" onclick="removeAll()">Clear Items</button>
-  
+  <h1 class="text-center">ToD0s List</h1>
+  <div class="container">
+    <form id="form" class="card-light text-center lg m-1 ">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" placeholder="Enter Your Task" class="input-title" required>
+      <input type="submit" value="ADD" class="btn-add">
+      <div class="msg"></div>
+    </form>
+
+    <h1 class="text-center my-1">Your Tasks</h1>
+    <div class="lists my-1">
+      <li class="">Learn Javascript Syntax<input type="submit" value="DELETE" class="btn-delete"></li>
+      <li class=" "> <a href="https://rehaan.netlify.app/">visit Rehan's Portfolio </a> <input type="submit"
+          value="DELETE" class="btn-delete"></li>
+      <li class=" task-done"> Read one book<input type="submit" value="DELETE" class="btn-delete"></li>
+    </div>
+    <center><button class="btn-delete-all text-center m-1">Clear All</button></center>
+  </div>
 </body>
+
 </html>
