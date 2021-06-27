@@ -25,21 +25,22 @@ btnAdd.addEventListener("click", (e) => {
 });
 
 // Do changes When Task is Done
-Lists.addEventListener("click", (r) => {
-  if (r.target.tagName === "LI") {
-    r.target.classList.toggle("task-done");
+Lists.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    e.target.classList.toggle("task-done");
   }
-  false;
 });
 
 // Delete The Selected Item From the List
-const btnDelete = document.querySelectorAll(".btn-delete").forEach(
-  (element) =>
-    (element.onclick = function () {
-      let div = this.parentElement;
-      div.style.display = "none";
-    })
-);
+Lists.addEventListener("click", removeItem);
+function removeItem(e) {
+  if (e.target.classList.contains("btn-delete")) {
+    if (confirm("Are You Sure?")) {
+      let li = e.target.parentElement;
+      Lists.removeChild(li);
+    }
+  }
+}
 
 // Delete ALL The Item From the List
 const btnDeleteAll = document
